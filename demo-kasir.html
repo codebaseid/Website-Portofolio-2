@@ -1,0 +1,298 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Pratinjau interaktif sistem kasir dan transaksi harian."
+    />
+    <meta name="theme-color" content="#f7f8f4" />
+    <title>Pratinjau Sistem Kasir — Rasa Pagi</title>
+    <link rel="stylesheet" href="demo.css" />
+    <script src="assets/brand-config.js" defer></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"
+      defer
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/ScrollTrigger.min.js"
+      defer
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/motion@12.23.24/dist/motion.js"
+      defer
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/lenis@1.3.15/dist/lenis.min.js"
+      defer
+    ></script>
+    <script src="animations.js" defer></script>
+    <script src="demo.js" defer></script>
+  </head>
+  <body data-demo="kasir">
+    <!-- === NAVIGASI PRATINJAU === -->
+    <header class="preview-header">
+      <div class="wrap preview-nav">
+        <a class="back-link" href="index.html"
+          ><span class="brand-logo"
+            ><img
+              class="brand-logo-img"
+              src="assets/logo-brand.png"
+              alt="Nuansa Digital"
+          /></span>
+          Kembali ke Portofolio</a
+        >
+        <a
+          class="button button-green whatsapp-link"
+          data-wa-message="Halo, saya ingin bertanya tentang sistem kasir sederhana seperti Rasa Pagi."
+          href="https://wa.me/628xxxxxxxxxx"
+          >Pesan Layanan Ini <span aria-hidden="true">↗</span></a
+        >
+      </div>
+    </header>
+    <!-- === ANTARMUKA KASIR === -->
+    <main class="wrap app-page">
+      <div class="app-heading">
+        <div>
+          <span class="eyebrow">PRATINJAU LANGSUNG · MODE SIMULASI</span>
+          <h1>Kasir Rasa Pagi</h1>
+          <p>
+            Ketuk produk untuk memasukkannya ke transaksi. Perhitungan akan
+            diperbarui otomatis.
+          </p>
+        </div>
+        <span class="open-status"><i></i> Kasir siap digunakan</span>
+      </div>
+      <div class="cashier-layout">
+        <section class="product-panel" aria-labelledby="product-heading">
+          <div class="panel-heading">
+            <div>
+              <h2 id="product-heading">Daftar produk</h2>
+              <p>Pilih produk untuk memulai transaksi</p>
+            </div>
+            <span class="item-count" id="catalog-count"></span>
+          </div>
+          <div class="product-grid" id="product-list">
+            <article class="product-tile" data-product-id="kopi-susu">
+              <span class="product-emoji emoji-coffee" aria-hidden="true"
+                >☕</span
+              ><span class="product-category">MINUMAN</span>
+              <h3>Kopi susu</h3>
+              <p>Espresso, susu, gula aren</p>
+              <div class="product-bottom">
+                <b data-price="kopi-susu">Rp18.000</b
+                ><button
+                  type="button"
+                  class="add-product"
+                  data-add="kopi-susu"
+                  aria-label="Tambah Kopi susu ke keranjang"
+                >
+                  +
+                </button>
+              </div>
+            </article>
+            <article class="product-tile" data-product-id="kopi-hitam">
+              <span class="product-emoji emoji-black" aria-hidden="true">◉</span
+              ><span class="product-category">MINUMAN</span>
+              <h3>Kopi hitam</h3>
+              <p>Kopi seduh pilihan</p>
+              <div class="product-bottom">
+                <b data-price="kopi-hitam">Rp14.000</b
+                ><button
+                  type="button"
+                  class="add-product"
+                  data-add="kopi-hitam"
+                  aria-label="Tambah Kopi hitam ke keranjang"
+                >
+                  +
+                </button>
+              </div>
+            </article>
+            <article class="product-tile" data-product-id="teh-lemon">
+              <span class="product-emoji emoji-tea" aria-hidden="true">🍋</span
+              ><span class="product-category">MINUMAN</span>
+              <h3>Teh lemon</h3>
+              <p>Teh segar dan lemon</p>
+              <div class="product-bottom">
+                <b data-price="teh-lemon">Rp12.000</b
+                ><button
+                  type="button"
+                  class="add-product"
+                  data-add="teh-lemon"
+                  aria-label="Tambah Teh lemon ke keranjang"
+                >
+                  +
+                </button>
+              </div>
+            </article>
+            <article class="product-tile" data-product-id="roti-panggang">
+              <span class="product-emoji emoji-bread" aria-hidden="true"
+                >♨</span
+              ><span class="product-category">MAKANAN</span>
+              <h3>Roti panggang</h3>
+              <p>Roti isi cokelat keju</p>
+              <div class="product-bottom">
+                <b data-price="roti-panggang">Rp16.000</b
+                ><button
+                  type="button"
+                  class="add-product"
+                  data-add="roti-panggang"
+                  aria-label="Tambah Roti panggang ke keranjang"
+                >
+                  +
+                </button>
+              </div>
+            </article>
+            <article class="product-tile" data-product-id="pisang-goreng">
+              <span class="product-emoji emoji-banana" aria-hidden="true"
+                >✦</span
+              ><span class="product-category">MAKANAN</span>
+              <h3>Pisang goreng</h3>
+              <p>Pisang hangat, tabur gula</p>
+              <div class="product-bottom">
+                <b data-price="pisang-goreng">Rp13.000</b
+                ><button
+                  type="button"
+                  class="add-product"
+                  data-add="pisang-goreng"
+                  aria-label="Tambah Pisang goreng ke keranjang"
+                >
+                  +
+                </button>
+              </div>
+            </article>
+            <article class="product-tile" data-product-id="air-mineral">
+              <span class="product-emoji emoji-water" aria-hidden="true">◌</span
+              ><span class="product-category">MINUMAN</span>
+              <h3>Air mineral</h3>
+              <p>Air mineral 600 ml</p>
+              <div class="product-bottom">
+                <b data-price="air-mineral">Rp6.000</b
+                ><button
+                  type="button"
+                  class="add-product"
+                  data-add="air-mineral"
+                  aria-label="Tambah Air mineral ke keranjang"
+                >
+                  +
+                </button>
+              </div>
+            </article>
+          </div>
+        </section>
+        <aside class="cart-panel" aria-labelledby="cart-heading">
+          <div class="panel-heading cart-heading">
+            <div>
+              <h2 id="cart-heading">Transaksi baru</h2>
+              <p id="cart-item-count">Belum ada produk</p>
+            </div>
+            <span class="cart-icon" aria-hidden="true">▤</span>
+          </div>
+          <div class="cart-lines" id="cart-items" aria-live="polite">
+            <div class="empty-cart">
+              <span aria-hidden="true">＋</span><b>Keranjang masih kosong</b
+              ><small>Pilih produk di sebelah kiri untuk memulai.</small>
+            </div>
+          </div>
+          <div class="cart-totals">
+            <div><span>Subtotal</span><b id="subtotal">Rp0</b></div>
+            <div class="grand-total">
+              <span>Total bayar</span><b id="total">Rp0</b>
+            </div>
+          </div>
+          <label class="field-label" for="cash-input">Uang diterima</label>
+          <div class="money-input">
+            <span>Rp</span
+            ><input
+              id="cash-input"
+              type="number"
+              min="0"
+              step="1000"
+              inputmode="numeric"
+              placeholder="Masukkan nominal"
+              aria-describedby="payment-help"
+            />
+          </div>
+          <div class="payment-help" id="payment-help">
+            <span>Kembalian</span><b id="change-due">Rp0</b>
+          </div>
+          <p
+            class="payment-message"
+            id="payment-message"
+            role="status"
+            aria-live="polite"
+          ></p>
+          <button
+            class="button button-green full-button"
+            id="complete-sale"
+            type="button"
+            disabled
+          >
+            Selesaikan Transaksi
+          </button>
+          <button
+            class="button button-plain full-button"
+            id="clear-cart"
+            type="button"
+          >
+            Kosongkan Keranjang
+          </button>
+        </aside>
+      </div>
+      <!-- === STRUK TRANSAKSI === -->
+      <section class="receipt-panel" aria-labelledby="receipt-heading">
+        <div class="receipt-head">
+          <div>
+            <span class="eyebrow">RINGKASAN TRANSAKSI</span>
+            <h2 id="receipt-heading">Struk pembayaran</h2>
+          </div>
+          <div class="button-row">
+            <button
+              class="button button-outline"
+              id="copy-receipt"
+              type="button"
+            >
+              Salin Struk</button
+            ><button
+              class="button button-green"
+              id="print-receipt"
+              type="button"
+            >
+              Cetak Struk
+            </button>
+          </div>
+        </div>
+        <div class="receipt-paper" id="receipt-content" aria-live="polite">
+          <div class="receipt-brand">
+            RASA PAGI<small>Tempat singgah dan menikmati hari</small>
+          </div>
+          <div class="receipt-divider"></div>
+          <p>Tambahkan produk untuk melihat ringkasan pembayaran.</p>
+          <div class="receipt-divider"></div>
+          <div class="receipt-footer">
+            Terima kasih. Semoga hari Anda menyenangkan.
+          </div>
+        </div>
+      </section>
+      <div class="demo-note">
+        <span aria-hidden="true">ⓘ</span> Mode simulasi untuk menjelajahi alur
+        transaksi. Data tidak disimpan sebagai transaksi usaha.
+      </div>
+    </main>
+    <div class="toast" id="demo-toast" role="status" aria-live="polite"></div>
+    <!-- === FOOTER === -->
+    <footer class="preview-footer">
+      <div class="wrap">
+        <span class="footer-brandline"
+          ><span class="brand-logo"
+            ><img
+              class="brand-logo-img"
+              src="assets/logo-brand.png"
+              alt="Nuansa Digital" /></span
+          >© <span class="year-now"></span> Rasa Pagi · Mode Simulasi</span
+        ><a href="index.html">Kembali ke Portofolio ↑</a>
+      </div>
+    </footer>
+  </body>
+</html>

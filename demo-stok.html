@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Pratinjau interaktif aplikasi pencatatan stok barang web dan Android."
+    />
+    <meta name="theme-color" content="#f7f8f4" />
+    <title>Pratinjau Aplikasi Stok — Gudang Rapi</title>
+    <link rel="stylesheet" href="demo.css" />
+    <script src="assets/brand-config.js" defer></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"
+      defer
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/ScrollTrigger.min.js"
+      defer
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/motion@12.23.24/dist/motion.js"
+      defer
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/lenis@1.3.15/dist/lenis.min.js"
+      defer
+    ></script>
+    <script src="animations.js" defer></script>
+    <script src="demo.js" defer></script>
+  </head>
+  <body data-demo="stok">
+    <!-- === NAVIGASI PRATINJAU === -->
+    <header class="preview-header">
+      <div class="wrap preview-nav">
+        <a class="back-link" href="index.html"
+          ><span class="brand-logo"
+            ><img
+              class="brand-logo-img"
+              src="assets/logo-brand.png"
+              alt="Nuansa Digital"
+          /></span>
+          Kembali ke Portofolio</a
+        >
+        <a
+          class="button button-green whatsapp-link"
+          data-wa-message="Halo, saya ingin bertanya tentang aplikasi manajemen stok barang web dan Android."
+          href="https://wa.me/628xxxxxxxxxx"
+          >Pesan Layanan Ini <span aria-hidden="true">↗</span></a
+        >
+      </div>
+    </header>
+    <!-- === RINGKASAN DAN DAFTAR STOK === -->
+    <main class="wrap app-page inventory-page">
+      <div class="app-heading stock-app-heading">
+        <div>
+          <span class="eyebrow">PRATINJAU LANGSUNG · MANAJEMEN BARANG</span>
+          <h1>Gudang Rapi</h1>
+          <p>
+            Pantau persediaan, catat pergerakan barang, dan temukan item dengan
+            cepat.
+          </p>
+        </div>
+        <span class="platform-badge"
+          ><span aria-hidden="true">▣</span> Akses Web &amp; Android</span
+        >
+      </div>
+      <section class="inventory-summary" aria-label="Ringkasan persediaan">
+        <article>
+          <span class="summary-icon summary-green">▤</span
+          ><span><small>Jenis barang</small><b id="summary-items">0</b></span>
+        </article>
+        <article>
+          <span class="summary-icon summary-blue">▦</span
+          ><span
+            ><small>Total persediaan</small><b id="summary-quantity">0</b></span
+          >
+        </article>
+        <article>
+          <span class="summary-icon summary-orange">!</span
+          ><span
+            ><small>Perlu diperiksa</small
+            ><b id="summary-low">0 barang</b></span
+          >
+        </article>
+      </section>
+      <section class="inventory-panel">
+        <div class="inventory-toolbar">
+          <div>
+            <h2>Daftar barang</h2>
+            <p>Perbarui stok masuk dan keluar secara langsung.</p>
+          </div>
+          <label class="search-field"
+            ><span aria-hidden="true">⌕</span
+            ><span class="visually-hidden">Cari barang</span
+            ><input
+              id="stock-search"
+              type="search"
+              placeholder="Cari nama atau kategori"
+          /></label>
+        </div>
+        <div class="table-scroll">
+          <table class="inventory-table">
+            <thead>
+              <tr>
+                <th scope="col">Nama barang</th>
+                <th scope="col">Kategori</th>
+                <th scope="col">Jumlah stok</th>
+                <th scope="col">Batas aman</th>
+                <th scope="col">Status</th>
+                <th scope="col">Perbarui stok</th>
+              </tr>
+            </thead>
+            <tbody id="stock-rows"></tbody>
+          </table>
+        </div>
+        <p class="empty-stock" id="empty-stock" hidden>
+          Barang tidak ditemukan. Coba kata pencarian lain.
+        </p>
+      </section>
+      <!-- === FORM BARANG BARU === -->
+      <section class="add-stock-panel">
+        <div class="add-stock-intro">
+          <span class="eyebrow">CATAT PERSEDIAAN</span>
+          <h2>Tambah barang baru</h2>
+          <p>Isi nama, kategori, jumlah awal, dan batas aman barang.</p>
+        </div>
+        <form class="stock-form" id="add-stock-form">
+          <label
+            >Nama barang<input
+              name="name"
+              type="text"
+              placeholder="Misalnya: Kopi Arabika"
+              required
+              maxlength="50"
+          /></label>
+          <label
+            >Kategori<input
+              name="category"
+              type="text"
+              placeholder="Misalnya: Bahan baku"
+              required
+              maxlength="35"
+          /></label>
+          <label
+            >Jumlah awal<input
+              name="quantity"
+              type="number"
+              min="0"
+              step="1"
+              value="0"
+              required
+              inputmode="numeric"
+          /></label>
+          <label
+            >Batas aman<input
+              name="threshold"
+              type="number"
+              min="0"
+              step="1"
+              value="5"
+              required
+              inputmode="numeric"
+          /></label>
+          <button class="button button-green" type="submit">
+            Tambah ke Daftar <span aria-hidden="true">＋</span>
+          </button>
+        </form>
+        <p
+          class="form-feedback"
+          id="stock-feedback"
+          role="status"
+          aria-live="polite"
+        ></p>
+      </section>
+      <div class="demo-note">
+        <span aria-hidden="true">ⓘ</span> Perubahan pada halaman ini hanya
+        berlangsung selama sesi pratinjau.
+      </div>
+    </main>
+    <div class="toast" id="demo-toast" role="status" aria-live="polite"></div>
+    <!-- === FOOTER === -->
+    <footer class="preview-footer">
+      <div class="wrap">
+        <span class="footer-brandline"
+          ><span class="brand-logo"
+            ><img
+              class="brand-logo-img"
+              src="assets/logo-brand.png"
+              alt="Nuansa Digital" /></span
+          >© <span class="year-now"></span> Gudang Rapi · Akses Web &amp;
+          Android</span
+        ><a href="index.html">Kembali ke Portofolio ↑</a>
+      </div>
+    </footer>
+  </body>
+</html>

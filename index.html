@@ -1,0 +1,1004 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#f8faf7" />
+    <meta
+      name="description"
+      content="Website dan aplikasi sederhana untuk membantu usaha, mahasiswa, dan organisasi bekerja lebih praktis."
+    />
+    <title>[NAMA_BRAND] — Solusi Digital Praktis</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="assets/brand-config.js" defer></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"
+      defer
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/ScrollTrigger.min.js"
+      defer
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/motion@12.23.24/dist/motion.js"
+      defer
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/lenis@1.3.15/dist/lenis.min.js"
+      defer
+    ></script>
+    <script src="animations.js" defer></script>
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#konten">Langsung ke isi halaman</a>
+    <!-- === NAVIGASI UTAMA === -->
+    <header class="site-header">
+      <div class="container nav-wrap">
+        <a class="brand" href="#beranda" aria-label="Kembali ke beranda">
+          <span class="brand-logo"
+            ><img
+              class="brand-logo-img"
+              src="assets/logo-brand.png"
+              alt="Nuansa Digital"
+          /></span>
+          <span data-brand>[NAMA_BRAND]</span>
+        </a>
+        <button
+          class="menu-toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="primary-navigation"
+          aria-label="Buka menu navigasi"
+        >
+          <span></span><span></span>
+        </button>
+        <nav
+          class="primary-nav"
+          id="primary-navigation"
+          aria-label="Navigasi utama"
+        >
+          <a href="#layanan">Layanan</a>
+          <a href="#portofolio">Portofolio Proyek</a>
+          <a href="#pameran-ui">Pameran UI</a>
+          <a href="#alur">Alur Kerja</a>
+          <a href="#kontak">Kontak</a>
+          <a
+            class="button button-small button-dark nav-cta whatsapp-link"
+            data-message="Halo, saya ingin konsultasi mengenai layanan digital."
+            href="https://wa.me/628xxxxxxxxxx"
+          >
+            <span>Konsultasi via WhatsApp</span
+            ><span aria-hidden="true">↗</span>
+          </a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="konten">
+      <!-- === HERO === -->
+      <section class="hero section-pad" id="beranda">
+        <div class="container hero-grid">
+          <div class="hero-copy">
+            <span class="eyebrow"
+              ><span class="eyebrow-dot"></span> Solusi digital yang terasa
+              dekat</span
+            >
+            <h1>
+              Urusan digital usaha Anda, jadi <span>lebih sederhana.</span>
+            </h1>
+            <p class="hero-lead">
+              Website profil, kasir, stok barang, hingga undangan digital—dibuat
+              praktis agar usaha dan kegiatan Anda berjalan lebih lancar.
+            </p>
+            <div class="hero-actions">
+              <a class="button button-primary" href="#portofolio"
+                >Lihat Karya &amp; Demo <span aria-hidden="true">↓</span></a
+              >
+              <a
+                class="button button-outline whatsapp-link"
+                data-message="Halo, saya ingin konsultasi gratis tentang website atau aplikasi."
+                href="https://wa.me/628xxxxxxxxxx"
+                ><span class="wa-icon" aria-hidden="true">◉</span> Konsultasi
+                Gratis</a
+              >
+            </div>
+            <div class="hero-note">
+              <div class="avatar-stack" aria-hidden="true">
+                <span>U</span><span>M</span><span>K</span>
+              </div>
+              <p>
+                <strong>Dirancang sesuai kebutuhan Anda</strong><br />Komunikasi
+                jelas, proses bertahap.
+              </p>
+            </div>
+          </div>
+          <div
+            class="hero-art"
+            aria-label="Ilustrasi tampilan website usaha pada komputer dan ponsel"
+            role="img"
+          >
+            <div class="art-orbit orbit-one"></div>
+            <div class="art-orbit orbit-two"></div>
+            <div class="float-card float-top">
+              <span class="float-icon">↗</span
+              ><span
+                ><b>Lebih mudah ditemukan</b
+                ><small>Usaha Anda, online</small></span
+              >
+            </div>
+            <div class="device desktop-device">
+              <div class="device-top">
+                <i></i><i></i><i></i><span>warungsenja.id</span>
+              </div>
+              <div class="mock-site">
+                <div class="mock-nav">
+                  <b><span></span> SENJA</b><span>Menu　 Tentang　 Kontak</span>
+                </div>
+                <div class="mock-hero">
+                  <small>RASA RUMAH, SETIAP HARI</small>
+                  <b>Tempat singgah<br />yang selalu hangat.</b>
+                  <span class="mock-pill">Lihat menu　↗</span>
+                </div>
+                <div class="mock-bottom">
+                  <span>☕　Kopi pilihan</span><span>✦　Bahan segar</span
+                  ><span>⌖　Temukan kami</span>
+                </div>
+              </div>
+            </div>
+            <div class="device phone-device">
+              <div class="phone-speaker"></div>
+              <div class="phone-screen">
+                <div class="phone-head"><span>9:41</span><span>●●●</span></div>
+                <div class="phone-photo">
+                  <span>WARUNG<br />SENJA</span>
+                </div>
+                <b>Selamat datang!</b>
+                <small>Tempat nyaman untuk menikmati hari.</small>
+                <span class="phone-cta">Pesan lewat WhatsApp　↗</span>
+                <div class="phone-line"></div>
+                <div class="phone-line short"></div>
+              </div>
+            </div>
+            <div class="float-card float-bottom">
+              <span class="status-icon">✓</span
+              ><span
+                ><b>Rapi di setiap layar</b
+                ><small>Nyaman diakses dari ponsel</small></span
+              >
+            </div>
+            <div class="sparkle sparkle-one">✳</div>
+            <div class="sparkle sparkle-two">✦</div>
+          </div>
+        </div>
+        <div class="container hero-bottom">
+          <span>UNTUK LANGKAH DIGITAL YANG LEBIH PRAKTIS</span
+          ><span class="hero-bottom-line"></span
+          ><span>WEB · APLIKASI · SISTEM USAHA</span>
+        </div>
+      </section>
+
+      <!-- === TARGET PASAR === -->
+      <section class="audience-section section-pad" id="solusi">
+        <div class="container">
+          <div class="section-heading heading-split">
+            <div>
+              <span class="eyebrow">Dibuat untuk kebutuhan nyata</span>
+              <h2>Berangkat dari kebutuhan Anda.</h2>
+            </div>
+            <p>
+              Teknologi tidak harus rumit. Kami bantu memilih solusi yang tepat,
+              mudah dipahami, dan nyaman dipakai sehari-hari.
+            </p>
+          </div>
+          <div class="audience-grid">
+            <article class="audience-card">
+              <div class="card-icon icon-peach">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M3 10.5 12 4l9 6.5M5.5 9v10h13V9M9 19v-6h6v6" />
+                </svg>
+              </div>
+              <span class="card-index">01 / USAHA</span>
+              <h3>UMKM &amp; Usaha Lokal</h3>
+              <p>
+                Bengkel, warung makan, barbershop, toko kelontong, hingga jasa
+                servis yang ingin tampil lebih mudah ditemukan pelanggan.
+              </p>
+              <a href="#layanan" class="text-link"
+                >Temukan solusinya <span aria-hidden="true">↗</span></a
+              >
+            </article>
+            <article class="audience-card">
+              <div class="card-icon icon-lime">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path
+                    d="M4 19.5V6.8A2.8 2.8 0 0 1 6.8 4H20v15.5H6.8A2.8 2.8 0 0 0 4 22m0-2.5A2.5 2.5 0 0 1 6.5 17H20M8 8h8m-8 3h7"
+                  />
+                </svg>
+              </div>
+              <span class="card-index">02 / AKADEMIK</span>
+              <h3>Mahasiswa &amp; Akademik</h3>
+              <p>
+                Dukungan tugas akhir, sistem informasi, atau prototipe aplikasi
+                web dan Android yang terstruktur dan mudah dipresentasikan.
+              </p>
+              <a href="#layanan" class="text-link"
+                >Temukan solusinya <span aria-hidden="true">↗</span></a
+              >
+            </article>
+            <article class="audience-card">
+              <div class="card-icon icon-lilac">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path
+                    d="M16 20v-1.5a4 4 0 0 0-4-4H7a4 4 0 0 0-4 4V20m5.5-9a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7Zm7.5 0a3.5 3.5 0 0 0 0-7m1 11h1a4 4 0 0 1 4 4v1"
+                  />
+                </svg>
+              </div>
+              <span class="card-index">03 / KOMUNITAS</span>
+              <h3>Komunitas &amp; Organisasi</h3>
+              <p>
+                Profil lembaga, pendaftaran acara, dan undangan digital untuk
+                menyampaikan informasi dengan lebih tertata.
+              </p>
+              <a href="#layanan" class="text-link"
+                >Temukan solusinya <span aria-hidden="true">↗</span></a
+              >
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- === LAYANAN === -->
+      <section class="services-section section-pad" id="layanan">
+        <div class="container services-layout">
+          <div class="services-intro">
+            <span class="eyebrow">Layanan unggulan</span>
+            <h2>Alat yang tepat untuk kerja yang lebih ringan.</h2>
+            <p>
+              Setiap layanan dapat disesuaikan dengan alur kerja, kebutuhan, dan
+              skala Anda.
+            </p>
+            <a class="button button-dark" href="#kontak"
+              >Diskusikan kebutuhan <span aria-hidden="true">↗</span></a
+            >
+          </div>
+          <div class="service-list">
+            <article class="service-item">
+              <span class="service-number">01</span>
+              <div>
+                <h3>Landing Page Profil Usaha</h3>
+                <p>
+                  Informasi usaha, layanan, tombol WhatsApp, dan Google Maps
+                  dalam satu halaman yang mudah diakses.
+                </p>
+              </div>
+              <span class="service-arrow" aria-hidden="true">↗</span>
+            </article>
+            <article class="service-item">
+              <span class="service-number">02</span>
+              <div>
+                <h3>Sistem Kasir Berbasis Web</h3>
+                <p>
+                  Catat transaksi harian dan pantau ringkasan penjualan dengan
+                  alur yang sederhana.
+                </p>
+              </div>
+              <span class="service-arrow" aria-hidden="true">↗</span>
+            </article>
+            <article class="service-item">
+              <span class="service-number">03</span>
+              <div>
+                <h3>Aplikasi Manajemen Stok</h3>
+                <p>
+                  Kelola barang masuk dan keluar melalui aplikasi web maupun
+                  Android.
+                </p>
+              </div>
+              <span class="service-arrow" aria-hidden="true">↗</span>
+            </article>
+            <article class="service-item">
+              <span class="service-number">04</span>
+              <div>
+                <h3>Website Undangan Digital</h3>
+                <p>
+                  Bagikan detail acara dengan tampilan interaktif yang praktis
+                  dibuka dari ponsel.
+                </p>
+              </div>
+              <span class="service-arrow" aria-hidden="true">↗</span>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- === PORTOFOLIO PROYEK === -->
+      <section class="portfolio-section section-pad" id="portofolio">
+        <div class="container">
+          <div class="section-heading heading-split portfolio-heading">
+            <div>
+              <span class="eyebrow">Portofolio proyek</span>
+              <h2>Karya yang bisa Anda jelajahi.</h2>
+            </div>
+            <p>
+              Kenali gambaran solusi melalui pratinjau langsung. Setiap proyek
+              dapat dikembangkan sesuai kebutuhan Anda.
+            </p>
+          </div>
+          <div class="portfolio-grid">
+            <article class="project-card">
+              <div class="project-visual visual-business">
+                <div class="visual-window">
+                  <div class="visual-bar">
+                    <i></i><i></i><i></i><span>mitraservis.id</span>
+                  </div>
+                  <div class="business-preview">
+                    <div class="preview-brand">MITRA<span>SERVIS</span></div>
+                    <div class="preview-copy">
+                      <small>AHLI SERVIS ANDALAN ANDA</small
+                      ><b>Perawatan tepat,<br />kendaraan prima.</b
+                      ><span class="preview-button">Jadwalkan servis　↗</span>
+                    </div>
+                    <div class="preview-wheel"></div>
+                  </div>
+                </div>
+                <span class="project-tag">WEBSITE PROFIL</span>
+              </div>
+              <div class="project-info">
+                <span class="project-type"
+                  >USAHA LOKAL · PROFIL &amp; LAYANAN</span
+                >
+                <h3>Website Profil Usaha &amp; Jasa Servis</h3>
+                <p>
+                  Kenalkan layanan, jam operasional, dan lokasi usaha dengan
+                  jelas.
+                </p>
+                <div class="project-actions">
+                  <a
+                    class="button button-dark button-small"
+                    href="demo-umkm.html"
+                    >Buka Pratinjau <span aria-hidden="true">↗</span></a
+                  ><a
+                    class="button button-quiet button-small whatsapp-link"
+                    data-message="Halo, saya tertarik memesan website profil usaha dan jasa servis seperti pada portofolio."
+                    href="https://wa.me/628xxxxxxxxxx"
+                    >Pesan Serupa</a
+                  >
+                </div>
+              </div>
+            </article>
+            <article class="project-card">
+              <div class="project-visual visual-cashier">
+                <div class="cashier-window">
+                  <div class="cashier-side">
+                    <b>RASA<span>POS</span></b
+                    ><i>▦　Ringkasan</i><i>▤　Transaksi</i><i>▧　Produk</i>
+                  </div>
+                  <div class="cashier-main">
+                    <div class="cashier-title">
+                      Ringkasan Penjualan <span>Hari ini　⌄</span>
+                    </div>
+                    <div class="stat-row">
+                      <div>
+                        <small>Total penjualan</small><b>Rp 2.450.000</b
+                        ><em>↗ 12,8%</em>
+                      </div>
+                      <div>
+                        <small>Transaksi</small><b>48</b><em>Hari ini</em>
+                      </div>
+                    </div>
+                    <div class="chart-bars">
+                      <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i
+                      ><i></i><i></i><i></i><i></i>
+                    </div>
+                  </div>
+                </div>
+                <span class="project-tag">SISTEM KASIR</span>
+              </div>
+              <div class="project-info">
+                <span class="project-type">USAHA LOKAL · TRANSAKSI HARIAN</span>
+                <h3>Sistem Kasir &amp; Transaksi Harian</h3>
+                <p>
+                  Pantau transaksi dan ringkasan penjualan dalam satu sistem.
+                </p>
+                <div class="project-actions">
+                  <a
+                    class="button button-dark button-small"
+                    href="demo-kasir.html"
+                    >Buka Pratinjau <span aria-hidden="true">↗</span></a
+                  ><a
+                    class="button button-quiet button-small whatsapp-link"
+                    data-message="Halo, saya tertarik memesan sistem kasir dan transaksi harian seperti pada portofolio."
+                    href="https://wa.me/628xxxxxxxxxx"
+                    >Pesan Serupa</a
+                  >
+                </div>
+              </div>
+            </article>
+            <article class="project-card">
+              <div class="project-visual visual-stock">
+                <div class="stock-window">
+                  <div class="stock-top">
+                    <b>Gudang<span>Rapi</span></b
+                    ><span>⌕　 Cari barang</span><span>●　Admin</span>
+                  </div>
+                  <div class="stock-body">
+                    <div class="stock-heading">
+                      <small>INVENTARIS</small><b>Stok barang</b
+                      ><span>+ Tambah barang</span>
+                    </div>
+                    <div class="stock-table">
+                      <div class="table-head">
+                        NAMA BARANG <span>KATEGORI</span><span>STOK</span
+                        ><span>STATUS</span>
+                      </div>
+                      <div>
+                        ◧　Kopi Arabika <span>Bahan baku</span><span>24</span
+                        ><em>Aman</em>
+                      </div>
+                      <div>
+                        ◧　Gelas 12 oz <span>Kemasan</span><span>08</span
+                        ><em class="low-stock">Menipis</em>
+                      </div>
+                      <div>
+                        ◧　Sirup vanila <span>Bahan baku</span><span>16</span
+                        ><em>Aman</em>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <span class="project-tag">MANAJEMEN STOK</span>
+              </div>
+              <div class="project-info">
+                <span class="project-type"
+                  >PENGELOLAAN BARANG · WEB &amp; ANDROID</span
+                >
+                <h3>Aplikasi Stok Barang Web &amp; Android</h3>
+                <p>Kelola persediaan barang dengan pencatatan yang tertata.</p>
+                <div class="project-actions">
+                  <a
+                    class="button button-dark button-small"
+                    href="demo-stok.html"
+                    >Buka Pratinjau <span aria-hidden="true">↗</span></a
+                  ><a
+                    class="button button-quiet button-small whatsapp-link"
+                    data-message="Halo, saya tertarik memesan aplikasi manajemen stok barang web dan Android seperti pada portofolio."
+                    href="https://wa.me/628xxxxxxxxxx"
+                    >Pesan Serupa</a
+                  >
+                </div>
+              </div>
+            </article>
+            <article class="project-card">
+              <div class="project-visual visual-invite">
+                <div class="invite-preview">
+                  <div class="invite-leaf leaf-left">❧</div>
+                  <div class="invite-leaf leaf-right">❧</div>
+                  <small>THE WEDDING OF</small
+                  ><b>Aruna <span>&amp;</span> Bima</b>
+                  <div class="invite-rule"></div>
+                  <span>12 . 08 . 2025</span><i>BERSAMA MENUJU CERITA BARU</i>
+                </div>
+                <span class="project-tag">UNDANGAN DIGITAL</span>
+              </div>
+              <div class="project-info">
+                <span class="project-type"
+                  >ACARA &amp; KOMUNITAS · UNDANGAN</span
+                >
+                <h3>Website Undangan Digital Acara</h3>
+                <p>
+                  Sampaikan informasi acara dengan hangat dan mudah dibagikan.
+                </p>
+                <div class="project-actions">
+                  <a
+                    class="button button-dark button-small"
+                    href="demo-undangan.html"
+                    >Buka Pratinjau <span aria-hidden="true">↗</span></a
+                  ><a
+                    class="button button-quiet button-small whatsapp-link"
+                    data-message="Halo, saya tertarik memesan website undangan digital seperti pada portofolio."
+                    href="https://wa.me/628xxxxxxxxxx"
+                    >Pesan Serupa</a
+                  >
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- === PAMERAN GAYA UI === -->
+      <section class="style-gallery-section section-pad" id="pameran-ui">
+        <div class="container">
+          <div class="section-heading heading-split">
+            <div>
+              <span class="eyebrow">Pameran gaya antarmuka</span>
+              <h2>Sepuluh gaya, satu katalog layanan.</h2>
+            </div>
+            <p>
+              Pilih gaya untuk melihat penerapannya pada halaman ini. Gunakan
+              filter untuk menelusuri karakter visual yang Anda sukai.
+            </p>
+          </div>
+          <div class="style-gallery-toolbar">
+            <div
+              class="style-filters"
+              role="group"
+              aria-label="Filter kategori gaya antarmuka"
+            >
+              <button
+                class="style-filter is-active"
+                type="button"
+                data-style-filter="all"
+                aria-pressed="true"
+              >
+                Semua
+              </button>
+              <button
+                class="style-filter"
+                type="button"
+                data-style-filter="bright"
+                aria-pressed="false"
+              >
+                Terang &amp; Bersih
+              </button>
+              <button
+                class="style-filter"
+                type="button"
+                data-style-filter="bold"
+                aria-pressed="false"
+              >
+                Ekspresif &amp; Berani
+              </button>
+              <button
+                class="style-filter"
+                type="button"
+                data-style-filter="retro"
+                aria-pressed="false"
+              >
+                Retro &amp; Teknis
+              </button>
+            </div>
+            <button
+              class="button button-outline button-small reset-style"
+              type="button"
+              id="reset-ui-style"
+            >
+              Kembalikan gaya awal
+            </button>
+          </div>
+          <p
+            class="style-filter-status"
+            id="style-filter-status"
+            aria-live="polite"
+          >
+            Menampilkan 10 gaya antarmuka.
+          </p>
+          <div class="style-gallery-grid" id="style-gallery">
+            <article
+              class="style-exhibit-card"
+              data-style-card
+              data-category="bright"
+            >
+              <div
+                class="style-preview style-preview-minimalism"
+                aria-hidden="true"
+              >
+                <span></span><i></i><i></i><b></b>
+              </div>
+              <div class="style-exhibit-info">
+                <div class="style-label-row">
+                  <span class="style-badge">Minimalism</span
+                  ><span class="style-category">Terang &amp; Bersih</span>
+                </div>
+                <p>
+                  Ruang lega, tipografi tegas, dan garis tipis yang mengutamakan
+                  keterbacaan.
+                </p>
+                <div class="style-card-actions">
+                  <button
+                    class="button button-dark button-small apply-style"
+                    type="button"
+                    data-apply-style="minimalism"
+                    aria-pressed="false"
+                  >
+                    Terapkan gaya ini</button
+                  ><a class="text-link" href="#portofolio"
+                    >Lihat proyek <span aria-hidden="true">↗</span></a
+                  >
+                </div>
+              </div>
+            </article>
+            <article
+              class="style-exhibit-card"
+              data-style-card
+              data-category="bright"
+            >
+              <div
+                class="style-preview style-preview-glassmorphism"
+                aria-hidden="true"
+              >
+                <span></span><i></i><i></i><b></b>
+              </div>
+              <div class="style-exhibit-info">
+                <div class="style-label-row">
+                  <span class="style-badge">Glassmorphism</span
+                  ><span class="style-category">Terang &amp; Bersih</span>
+                </div>
+                <p>
+                  Permukaan bening, lapisan blur, dan aksen gradasi yang lembut.
+                </p>
+                <div class="style-card-actions">
+                  <button
+                    class="button button-dark button-small apply-style"
+                    type="button"
+                    data-apply-style="glassmorphism"
+                    aria-pressed="false"
+                  >
+                    Terapkan gaya ini</button
+                  ><a class="text-link" href="#portofolio"
+                    >Lihat proyek <span aria-hidden="true">↗</span></a
+                  >
+                </div>
+              </div>
+            </article>
+            <article
+              class="style-exhibit-card"
+              data-style-card
+              data-category="bright"
+            >
+              <div
+                class="style-preview style-preview-neumorphism"
+                aria-hidden="true"
+              >
+                <span></span><i></i><i></i><b></b>
+              </div>
+              <div class="style-exhibit-info">
+                <div class="style-label-row">
+                  <span class="style-badge">Neumorphism</span
+                  ><span class="style-category">Terang &amp; Bersih</span>
+                </div>
+                <p>
+                  Permukaan lembut senada latar dengan bayangan timbul yang
+                  halus.
+                </p>
+                <div class="style-card-actions">
+                  <button
+                    class="button button-dark button-small apply-style"
+                    type="button"
+                    data-apply-style="neumorphism"
+                    aria-pressed="false"
+                  >
+                    Terapkan gaya ini</button
+                  ><a class="text-link" href="#portofolio"
+                    >Lihat proyek <span aria-hidden="true">↗</span></a
+                  >
+                </div>
+              </div>
+            </article>
+            <article
+              class="style-exhibit-card"
+              data-style-card
+              data-category="bold"
+            >
+              <div class="style-preview style-preview-neo" aria-hidden="true">
+                <span></span><i></i><i></i><b></b>
+              </div>
+              <div class="style-exhibit-info">
+                <div class="style-label-row">
+                  <span class="style-badge">Neo-Brutalism</span
+                  ><span class="style-category">Ekspresif &amp; Berani</span>
+                </div>
+                <p>
+                  Border tegas, warna kontras, dan bayangan keras tanpa blur.
+                </p>
+                <div class="style-card-actions">
+                  <button
+                    class="button button-dark button-small apply-style"
+                    type="button"
+                    data-apply-style="neo-brutalism"
+                    aria-pressed="false"
+                  >
+                    Terapkan gaya ini</button
+                  ><a class="text-link" href="#portofolio"
+                    >Lihat proyek <span aria-hidden="true">↗</span></a
+                  >
+                </div>
+              </div>
+            </article>
+            <article
+              class="style-exhibit-card"
+              data-style-card
+              data-category="bright"
+            >
+              <div class="style-preview style-preview-clay" aria-hidden="true">
+                <span></span><i></i><i></i><b></b>
+              </div>
+              <div class="style-exhibit-info">
+                <div class="style-label-row">
+                  <span class="style-badge">Claymorphism</span
+                  ><span class="style-category">Terang &amp; Bersih</span>
+                </div>
+                <p>
+                  Kartu empuk, sudut membulat, dan dimensi mengambang yang
+                  ceria.
+                </p>
+                <div class="style-card-actions">
+                  <button
+                    class="button button-dark button-small apply-style"
+                    type="button"
+                    data-apply-style="claymorphism"
+                    aria-pressed="false"
+                  >
+                    Terapkan gaya ini</button
+                  ><a class="text-link" href="#portofolio"
+                    >Lihat proyek <span aria-hidden="true">↗</span></a
+                  >
+                </div>
+              </div>
+            </article>
+            <article
+              class="style-exhibit-card"
+              data-style-card
+              data-category="bright"
+            >
+              <div class="style-preview style-preview-bento" aria-hidden="true">
+                <span></span><i></i><i></i><b></b>
+              </div>
+              <div class="style-exhibit-info">
+                <div class="style-label-row">
+                  <span class="style-badge">Bento Grid</span
+                  ><span class="style-category">Terang &amp; Bersih</span>
+                </div>
+                <p>
+                  Susunan modular asimetris untuk informasi yang cepat dipindai.
+                </p>
+                <div class="style-card-actions">
+                  <button
+                    class="button button-dark button-small apply-style"
+                    type="button"
+                    data-apply-style="bento-grid"
+                    aria-pressed="false"
+                  >
+                    Terapkan gaya ini</button
+                  ><a class="text-link" href="#portofolio"
+                    >Lihat proyek <span aria-hidden="true">↗</span></a
+                  >
+                </div>
+              </div>
+            </article>
+            <article
+              class="style-exhibit-card"
+              data-style-card
+              data-category="bold"
+            >
+              <div
+                class="style-preview style-preview-cyberpunk"
+                aria-hidden="true"
+              >
+                <span></span><i></i><i></i><b></b>
+              </div>
+              <div class="style-exhibit-info">
+                <div class="style-label-row">
+                  <span class="style-badge">Cyberpunk Neon</span
+                  ><span class="style-category">Ekspresif &amp; Berani</span>
+                </div>
+                <p>
+                  Latar gelap dengan aksen neon yang terukur dan kontras jelas.
+                </p>
+                <div class="style-card-actions">
+                  <button
+                    class="button button-dark button-small apply-style"
+                    type="button"
+                    data-apply-style="cyberpunk-neon"
+                    aria-pressed="false"
+                  >
+                    Terapkan gaya ini</button
+                  ><a class="text-link" href="#portofolio"
+                    >Lihat proyek <span aria-hidden="true">↗</span></a
+                  >
+                </div>
+              </div>
+            </article>
+            <article
+              class="style-exhibit-card"
+              data-style-card
+              data-category="retro"
+            >
+              <div class="style-preview style-preview-retro" aria-hidden="true">
+                <span></span><i></i><i></i><b></b>
+              </div>
+              <div class="style-exhibit-info">
+                <div class="style-label-row">
+                  <span class="style-badge">Retro Windows</span
+                  ><span class="style-category">Retro &amp; Teknis</span>
+                </div>
+                <p>
+                  Jendela klasik, title bar khas, dan tombol bevel bergaya
+                  komputer lawas.
+                </p>
+                <div class="style-card-actions">
+                  <button
+                    class="button button-dark button-small apply-style"
+                    type="button"
+                    data-apply-style="retro-windows"
+                    aria-pressed="false"
+                  >
+                    Terapkan gaya ini</button
+                  ><a class="text-link" href="#portofolio"
+                    >Lihat proyek <span aria-hidden="true">↗</span></a
+                  >
+                </div>
+              </div>
+            </article>
+            <article
+              class="style-exhibit-card"
+              data-style-card
+              data-category="bright"
+            >
+              <div class="style-preview style-preview-swiss" aria-hidden="true">
+                <span></span><i></i><i></i><b></b>
+              </div>
+              <div class="style-exhibit-info">
+                <div class="style-label-row">
+                  <span class="style-badge">Swiss Editorial</span
+                  ><span class="style-category">Terang &amp; Bersih</span>
+                </div>
+                <p>
+                  Grid presisi dan hierarki editorial yang kuat serta
+                  profesional.
+                </p>
+                <div class="style-card-actions">
+                  <button
+                    class="button button-dark button-small apply-style"
+                    type="button"
+                    data-apply-style="swiss-editorial"
+                    aria-pressed="false"
+                  >
+                    Terapkan gaya ini</button
+                  ><a class="text-link" href="#portofolio"
+                    >Lihat proyek <span aria-hidden="true">↗</span></a
+                  >
+                </div>
+              </div>
+            </article>
+            <article
+              class="style-exhibit-card"
+              data-style-card
+              data-category="retro"
+            >
+              <div class="style-preview style-preview-skeuo" aria-hidden="true">
+                <span></span><i></i><i></i><b></b>
+              </div>
+              <div class="style-exhibit-info">
+                <div class="style-label-row">
+                  <span class="style-badge">Skeuomorphism</span
+                  ><span class="style-category">Retro &amp; Teknis</span>
+                </div>
+                <p>
+                  Tekstur halus dan tombol berdimensi dengan sentuhan modern.
+                </p>
+                <div class="style-card-actions">
+                  <button
+                    class="button button-dark button-small apply-style"
+                    type="button"
+                    data-apply-style="skeuomorphism"
+                    aria-pressed="false"
+                  >
+                    Terapkan gaya ini</button
+                  ><a class="text-link" href="#portofolio"
+                    >Lihat proyek <span aria-hidden="true">↗</span></a
+                  >
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- === ALUR PEMESANAN === -->
+      <section class="process-section section-pad" id="alur">
+        <div class="container">
+          <div class="section-heading process-heading">
+            <span class="eyebrow">Alur pemesanan</span>
+            <h2>Jelas dari awal, nyaman sampai selesai.</h2>
+            <p>
+              Anda selalu tahu apa yang sedang dikerjakan dan apa langkah
+              berikutnya.
+            </p>
+          </div>
+          <div class="process-grid">
+            <article class="process-step">
+              <span class="step-number">01</span>
+              <div class="step-icon">↗</div>
+              <h3>Diskusi Kebutuhan</h3>
+              <p>Ceritakan tujuan, kebutuhan, dan gambaran anggaran Anda.</p>
+            </article>
+            <article class="process-step">
+              <span class="step-number">02</span>
+              <div class="step-icon">✳</div>
+              <h3>Proses Pengerjaan</h3>
+              <p>Kami susun tampilan dan fungsi sesuai kesepakatan bersama.</p>
+            </article>
+            <article class="process-step">
+              <span class="step-number">03</span>
+              <div class="step-icon">⌕</div>
+              <h3>Peninjauan &amp; Revisi</h3>
+              <p>Tinjau hasilnya dan sampaikan penyesuaian yang diperlukan.</p>
+            </article>
+            <article class="process-step">
+              <span class="step-number">04</span>
+              <div class="step-icon">✓</div>
+              <h3>Serah Terima &amp; Siap Pakai</h3>
+              <p>Terima hasil akhir beserta panduan penggunaan yang jelas.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- === CTA PENUTUP === -->
+      <section class="contact-section section-pad" id="kontak">
+        <div class="container contact-panel">
+          <div class="contact-decoration" aria-hidden="true">
+            <span>✳</span><span>↗</span><span>✦</span>
+          </div>
+          <div class="contact-copy">
+            <span class="eyebrow eyebrow-light">Mari mulai percakapan</span>
+            <h2>Punya kebutuhan digital? Kita bicarakan.</h2>
+            <p>
+              Konsultasikan ide Anda tanpa biaya. Kami bantu petakan kebutuhan
+              dan langkah yang paling sesuai.
+            </p>
+          </div>
+          <a
+            class="button button-light whatsapp-link"
+            data-message="Halo, saya ingin berkonsultasi mengenai kebutuhan website atau aplikasi."
+            href="https://wa.me/628xxxxxxxxxx"
+            >Hubungi via WhatsApp <span aria-hidden="true">↗</span></a
+          >
+        </div>
+      </section>
+    </main>
+
+    <!-- === FOOTER === -->
+    <footer class="site-footer">
+      <div class="container footer-main">
+        <div>
+          <a class="brand footer-brand" href="#beranda"
+            ><span class="brand-logo"
+              ><img
+                class="brand-logo-img"
+                src="assets/logo-brand.png"
+                alt="Nuansa Digital" /></span
+            ><span data-brand>[NAMA_BRAND]</span></a
+          >
+          <p>
+            Solusi digital yang praktis, dekat, dan dibuat untuk kebutuhan Anda.
+          </p>
+        </div>
+        <div class="footer-contact">
+          <span class="footer-label">BICARA DENGAN KAMI</span
+          ><a
+            class="whatsapp-link"
+            data-message="Halo, saya ingin bertanya mengenai layanan."
+            href="https://wa.me/628xxxxxxxxxx"
+            >WhatsApp <span aria-hidden="true">↗</span></a
+          ><a href="#layanan"
+            >Jelajahi layanan <span aria-hidden="true">↗</span></a
+          >
+        </div>
+      </div>
+      <div class="container footer-bottom">
+        <span
+          >© <span id="current-year"></span>
+          <span data-brand>[NAMA_BRAND]</span>. Hak cipta dilindungi.</span
+        ><a href="#beranda">Kembali ke atas ↑</a>
+      </div>
+    </footer>
+  </body>
+</html>

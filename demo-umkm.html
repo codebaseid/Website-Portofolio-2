@@ -1,0 +1,281 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Pratinjau website profil usaha bengkel dan servis kendaraan."
+    />
+    <meta name="theme-color" content="#f7f8f4" />
+    <title>Pratinjau Profil Usaha — Bengkel Arus Motor</title>
+    <link rel="stylesheet" href="demo.css" />
+    <script src="assets/brand-config.js" defer></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"
+      defer
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/ScrollTrigger.min.js"
+      defer
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/motion@12.23.24/dist/motion.js"
+      defer
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/lenis@1.3.15/dist/lenis.min.js"
+      defer
+    ></script>
+    <script src="animations.js" defer></script>
+    <script src="demo.js" defer></script>
+  </head>
+  <body data-demo="umkm">
+    <!-- === NAVIGASI PRATINJAU === -->
+    <header class="preview-header">
+      <div class="wrap preview-nav">
+        <a class="back-link" href="index.html"
+          ><span class="brand-logo"
+            ><img
+              class="brand-logo-img"
+              src="assets/logo-brand.png"
+              alt="Nuansa Digital"
+          /></span>
+          Kembali ke Portofolio</a
+        >
+        <a
+          class="button button-green whatsapp-link"
+          data-wa-message="Halo, saya ingin bertanya tentang website profil usaha seperti Bengkel Arus Motor."
+          href="https://wa.me/628xxxxxxxxxx"
+          >Pesan Layanan Ini <span aria-hidden="true">↗</span></a
+        >
+      </div>
+    </header>
+    <main>
+      <!-- === PROFIL DAN LAYANAN USAHA === -->
+      <section class="local-hero">
+        <div class="wrap local-hero-grid">
+          <div class="local-copy">
+            <span class="eyebrow"
+              ><span class="live-dot"></span> BENGKEL &amp; SERVIS
+              KENDARAAN</span
+            >
+            <h1>Perjalanan lancar dimulai dari kendaraan yang terawat.</h1>
+            <p>
+              Servis kendaraan yang teliti, harga transparan, dan dikerjakan
+              oleh teknisi berpengalaman di sekitar Anda.
+            </p>
+            <div class="button-row">
+              <a
+                class="button button-green whatsapp-link"
+                data-wa-message="Halo Bengkel Arus Motor, saya ingin membuat jadwal servis."
+                href="https://wa.me/628xxxxxxxxxx"
+                >Buat Jadwal Servis <span aria-hidden="true">↗</span></a
+              >
+              <a class="button button-outline" href="#layanan"
+                >Lihat Layanan <span aria-hidden="true">↓</span></a
+              >
+            </div>
+            <div class="local-proof">
+              <span class="stars" aria-label="Lima bintang">★★★★★</span
+              ><span>Dipercaya pelanggan di sekitar Bandung</span>
+            </div>
+          </div>
+          <div
+            class="workshop-art"
+            role="img"
+            aria-label="Ilustrasi bengkel servis kendaraan yang rapi"
+          >
+            <div class="art-sun"></div>
+            <div class="garage-roof"></div>
+            <div class="garage-building">
+              <div class="garage-sign">
+                ARUS <b>MOTOR</b><small>SERVIS &amp; PERAWATAN</small>
+              </div>
+              <div class="garage-door">
+                <span></span><span></span><span></span>
+              </div>
+            </div>
+            <div class="garage-ground"></div>
+            <div class="garage-plant plant-a">♧</div>
+            <div class="garage-plant plant-b">♧</div>
+            <div class="workshop-badge">
+              <span>✓</span> Teknisi berpengalaman
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="local-facts">
+        <div class="wrap facts-grid">
+          <div><b>10+</b><span>Tahun melayani</span></div>
+          <div><b>1.200+</b><span>Kendaraan ditangani</span></div>
+          <div>
+            <b>4,9 <span class="stars">★</span></b
+            ><span>Penilaian pelanggan</span>
+          </div>
+        </div>
+      </section>
+      <section class="content-section" id="layanan">
+        <div class="wrap">
+          <div class="section-title">
+            <span class="eyebrow">LAYANAN KAMI</span>
+            <h2>Rawat kendaraan tanpa repot.</h2>
+            <p>
+              Pilih layanan yang sesuai. Tim kami siap membantu menjelaskan
+              kebutuhan kendaraan Anda.
+            </p>
+          </div>
+          <div class="service-cards">
+            <article class="service-card">
+              <span class="service-symbol">⌕</span>
+              <h3>Servis berkala</h3>
+              <p>
+                Pemeriksaan rutin untuk menjaga performa dan kenyamanan
+                kendaraan.
+              </p>
+              <b>Mulai Rp150.000</b
+              ><a
+                class="text-action whatsapp-link"
+                data-wa-message="Halo, saya ingin bertanya tentang paket servis berkala."
+                href="https://wa.me/628xxxxxxxxxx"
+                >Tanyakan paket <span aria-hidden="true">↗</span></a
+              >
+            </article>
+            <article class="service-card">
+              <span class="service-symbol">⚙</span>
+              <h3>Servis kelistrikan</h3>
+              <p>
+                Diagnosa aki, lampu, starter, dan komponen kelistrikan
+                kendaraan.
+              </p>
+              <b>Mulai Rp100.000</b
+              ><a
+                class="text-action whatsapp-link"
+                data-wa-message="Halo, saya ingin bertanya tentang servis kelistrikan kendaraan."
+                href="https://wa.me/628xxxxxxxxxx"
+                >Tanyakan paket <span aria-hidden="true">↗</span></a
+              >
+            </article>
+            <article class="service-card">
+              <span class="service-symbol">◉</span>
+              <h3>Pemeriksaan menyeluruh</h3>
+              <p>
+                Pengecekan kondisi kendaraan sebelum perjalanan jauh atau
+                pembelian.
+              </p>
+              <b>Mulai Rp200.000</b
+              ><a
+                class="text-action whatsapp-link"
+                data-wa-message="Halo, saya ingin membuat jadwal pemeriksaan menyeluruh kendaraan."
+                href="https://wa.me/628xxxxxxxxxx"
+                >Tanyakan paket <span aria-hidden="true">↗</span></a
+              >
+            </article>
+          </div>
+        </div>
+      </section>
+      <!-- === TESTIMONI PELANGGAN === -->
+      <section class="review-band">
+        <div class="wrap review-layout">
+          <div>
+            <span class="eyebrow">CERITA PELANGGAN</span>
+            <h2>Nyaman karena tahu apa yang dikerjakan.</h2>
+          </div>
+          <div class="review-card">
+            <span class="stars">★★★★★</span>
+            <blockquote>
+              “Penjelasannya jelas, biaya disampaikan sebelum pengerjaan.
+              Kendaraan selesai tepat waktu.”
+            </blockquote>
+            <div class="review-person">
+              <span class="person-avatar">RA</span
+              ><span
+                ><b>Rina A.</b><small>Pelanggan servis berkala</small></span
+              >
+            </div>
+          </div>
+          <div class="review-card">
+            <span class="stars">★★★★★</span>
+            <blockquote>
+              “Masalah starter cepat ditemukan. Saya juga diberi saran perawatan
+              tanpa dipaksa.”
+            </blockquote>
+            <div class="review-person">
+              <span class="person-avatar avatar-alt">DP</span
+              ><span
+                ><b>Dimas P.</b
+                ><small>Pelanggan servis kelistrikan</small></span
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- === LOKASI DAN JAM OPERASIONAL === -->
+      <section class="content-section location-section" id="lokasi">
+        <div class="wrap location-grid">
+          <div>
+            <span class="eyebrow">KUNJUNGI BENGKEL</span>
+            <h2>Siap menyambut Anda.</h2>
+            <p class="muted">Jl. Anggrek No. 18, Bandung, Jawa Barat</p>
+            <div class="hours-list">
+              <div><span>Senin – Jumat</span><b>08.00 – 17.00</b></div>
+              <div><span>Sabtu</span><b>08.00 – 15.00</b></div>
+              <div><span>Minggu</span><b>Tutup</b></div>
+            </div>
+            <a
+              class="button button-green whatsapp-link"
+              data-wa-message="Halo, saya ingin menanyakan lokasi dan jam operasional Bengkel Arus Motor."
+              href="https://wa.me/628xxxxxxxxxx"
+              >Tanyakan Sebelum Datang <span aria-hidden="true">↗</span></a
+            >
+          </div>
+          <div class="map-frame">
+            <iframe
+              id="business-map"
+              title="Peta lokasi Bengkel Arus Motor"
+              src="https://maps.google.com/maps?q=bengkel%20kendaraan%20Bandung&output=embed"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe
+            ><a
+              id="map-link"
+              class="map-link"
+              href="https://maps.google.com/?q=bengkel+kendaraan+Bandung"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Buka peta lebih besar ↗</a
+            >
+          </div>
+        </div>
+      </section>
+      <!-- === CTA PEMESANAN === -->
+      <section class="local-last-cta">
+        <div class="wrap last-cta-inner">
+          <div>
+            <span class="eyebrow">KENDARAAN ANDA SIAP DIRAWAT?</span>
+            <h2>Jadwalkan kunjungan dengan mudah.</h2>
+          </div>
+          <a
+            class="button button-light whatsapp-link"
+            data-wa-message="Halo Bengkel Arus Motor, saya ingin membuat jadwal servis."
+            href="https://wa.me/628xxxxxxxxxx"
+            >Hubungi via WhatsApp <span aria-hidden="true">↗</span></a
+          >
+        </div>
+      </section>
+    </main>
+    <!-- === FOOTER === -->
+    <footer class="preview-footer">
+      <div class="wrap">
+        <span class="footer-brandline"
+          ><span class="brand-logo"
+            ><img
+              class="brand-logo-img"
+              src="assets/logo-brand.png"
+              alt="Nuansa Digital" /></span
+          >© <span class="year-now"></span> Bengkel Arus Motor</span
+        ><a href="index.html">Kembali ke Portofolio ↑</a>
+      </div>
+    </footer>
+  </body>
+</html>
