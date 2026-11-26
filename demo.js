@@ -1,7 +1,7 @@
 // --- KONFIGURASI DEMO DAN KONTAK ---
 const LOGO_FILENAME = window.BRAND_ASSET_CONFIG.LOGO_FILENAME;
 const LOGO_FOLDER = window.BRAND_ASSET_CONFIG.LOGO_FOLDER;
-const WHATSAPP_NUMBER = "628xxxxxxxxxx";
+const WHATSAPP_NUMBER = "6285213538741";
 const BRAND_NAME = window.BRAND_ASSET_CONFIG.BRAND_NAME;
 const GOOGLE_MAPS_URL = "[LINK_GOOGLE_MAPS]";
 const DEFAULT_MAP_SEARCH = "Bengkel Arus Motor, Jl. Anggrek No. 18, Bandung";
@@ -179,8 +179,18 @@ function initCashier() {
         : lastReceipt;
 
     if (!activeReceipt) {
-      receiptContent.innerHTML =
-        '<div class="receipt-brand">RASA PAGI<small>Tempat singgah dan menikmati hari</small></div><div class="receipt-divider"></div><p>Tambahkan produk untuk melihat ringkasan pembayaran.</p><div class="receipt-divider"></div><div class="receipt-footer">Terima kasih. Semoga hari Anda menyenangkan.</div>';
+      receiptContent.innerHTML = `
+        <div class="receipt-brand">
+          RASA PAGI
+          <small>Tempat singgah dan menikmati hari</small>
+        </div>
+        <div class="receipt-divider"></div>
+        <p>Tambahkan produk untuk melihat ringkasan pembayaran.</p>
+        <div class="receipt-divider"></div>
+        <div class="receipt-footer">
+          Terima kasih. Semoga hari Anda menyenangkan.
+        </div>
+      `;
       return;
     }
 
@@ -190,7 +200,35 @@ function initCashier() {
           `<div class="receipt-row"><span>${item.name} × ${item.quantity}</span><b>${money(item.price * item.quantity)}</b></div>`,
       )
       .join("");
-    receiptContent.innerHTML = `<div class="receipt-brand">RASA PAGI<small>Tempat singgah dan menikmati hari</small></div><div class="receipt-divider"></div><div class="receipt-row muted-row"><span>Waktu</span><span>${activeReceipt.date}</span></div>${itemMarkup}<div class="receipt-divider"></div><div class="receipt-row receipt-total"><span>Total</span><b>${money(activeReceipt.total)}</b></div><div class="receipt-row"><span>Dibayar</span><b>${money(activeReceipt.paid)}</b></div><div class="receipt-row"><span>Kembalian</span><b>${money(activeReceipt.change)}</b></div><div class="receipt-divider"></div><div class="receipt-footer">Terima kasih. Semoga hari Anda menyenangkan.</div>`;
+    receiptContent.innerHTML = `
+      <div class="receipt-brand">
+        RASA PAGI
+        <small>Tempat singgah dan menikmati hari</small>
+      </div>
+      <div class="receipt-divider"></div>
+      <div class="receipt-row muted-row">
+        <span>Waktu</span>
+        <span>${activeReceipt.date}</span>
+      </div>
+      ${itemMarkup}
+      <div class="receipt-divider"></div>
+      <div class="receipt-row receipt-total">
+        <span>Total</span>
+        <b>${money(activeReceipt.total)}</b>
+      </div>
+      <div class="receipt-row">
+        <span>Dibayar</span>
+        <b>${money(activeReceipt.paid)}</b>
+      </div>
+      <div class="receipt-row">
+        <span>Kembalian</span>
+        <b>${money(activeReceipt.change)}</b>
+      </div>
+      <div class="receipt-divider"></div>
+      <div class="receipt-footer">
+        Terima kasih. Semoga hari Anda menyenangkan.
+      </div>
+    `;
   }
 
   function renderCart() {

@@ -6,9 +6,33 @@
     <meta name="theme-color" content="#f8faf7" />
     <meta
       name="description"
-      content="Website dan aplikasi sederhana untuk membantu usaha, mahasiswa, dan organisasi bekerja lebih praktis."
+      content="Jasa pembuatan website dan aplikasi praktis untuk UMKM, mahasiswa, dan organisasi. Konsultasi kebutuhan serta estimasi layanan melalui WhatsApp."
     />
-    <title>[NAMA_BRAND] — Solusi Digital Praktis</title>
+    <meta
+      property="og:title"
+      content="Nuansa Digital — Solusi Digital Praktis"
+    />
+    <meta
+      property="og:description"
+      content="Website profil usaha, sistem kasir, aplikasi stok, dan undangan digital yang dirancang sesuai kebutuhan."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="assets/logo-brand.png" />
+    <meta property="og:url" content="" />
+    <meta property="og:locale" content="id_ID" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <title>Nuansa Digital — Website dan Aplikasi Praktis</title>
+    <script type="application/ld+json" id="business-schema">
+      {
+        "@context": "https://schema.org",
+        "@type": "ProfessionalService",
+        "name": "Nuansa Digital",
+        "description": "Jasa pembuatan website dan aplikasi praktis untuk usaha, mahasiswa, dan organisasi.",
+        "telephone": "+6285213538741",
+        "areaServed": "Bandung, Jawa Barat",
+        "image": "assets/logo-brand.png"
+      }
+    </script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -65,6 +89,7 @@
           aria-label="Navigasi utama"
         >
           <a href="#layanan">Layanan</a>
+          <a href="#kalkulator">Estimasi Harga</a>
           <a href="#portofolio">Portofolio Proyek</a>
           <a href="#pameran-ui">Pameran UI</a>
           <a href="#alur">Alur Kerja</a>
@@ -317,6 +342,79 @@
         </div>
       </section>
 
+      <!-- === KALKULATOR ESTIMASI DAN FORM BRIEF === -->
+      <section class="estimate-section section-pad" id="kalkulator">
+        <div class="container estimate-layout">
+          <div class="estimate-intro">
+            <span class="eyebrow">Perencanaan anggaran</span>
+            <h2>Mulai dari kisaran yang lebih jelas.</h2>
+            <p>
+              Pilih layanan dan kebutuhan tambahan untuk melihat estimasi awal.
+              Rincian akhir disesuaikan setelah kebutuhan dibahas bersama.
+            </p>
+            <span class="estimate-note">
+              Kisaran estimasi awal dapat berubah sesuai ruang lingkup proyek.
+            </span>
+          </div>
+
+          <form class="estimate-panel" id="estimate-form">
+            <label class="estimate-field" for="estimate-project">
+              Jenis proyek
+              <select id="estimate-project" name="project" required>
+                <option value="" selected disabled>Pilih jenis proyek</option>
+              </select>
+            </label>
+
+            <fieldset class="estimate-addons">
+              <legend>Kebutuhan tambahan</legend>
+              <div id="estimate-addon-options"></div>
+            </fieldset>
+
+            <label class="estimate-field" for="estimate-client">
+              Nama atau nama usaha
+              <input
+                id="estimate-client"
+                name="client"
+                type="text"
+                maxlength="100"
+                placeholder="Tuliskan nama Anda atau usaha"
+              />
+            </label>
+
+            <label class="estimate-field" for="estimate-notes">
+              Catatan kebutuhan
+              <textarea
+                id="estimate-notes"
+                name="notes"
+                rows="3"
+                maxlength="600"
+                placeholder="Fitur, target waktu, atau kebutuhan khusus"
+              ></textarea>
+            </label>
+
+            <div class="estimate-summary" aria-live="polite" aria-atomic="true">
+              <span class="estimate-summary-label">Kisaran estimasi awal</span>
+              <strong id="estimate-range">Pilih jenis proyek</strong>
+              <ul id="estimate-breakdown"></ul>
+              <span class="estimate-summary-note">
+                Nilai dapat disesuaikan setelah kebutuhan dan ruang lingkup
+                disepakati.
+              </span>
+            </div>
+
+            <button class="button button-dark estimate-submit" type="submit">
+              Kirim brief via WhatsApp
+              <span aria-hidden="true">↗</span>
+            </button>
+            <p
+              class="estimate-feedback"
+              id="estimate-feedback"
+              role="status"
+            ></p>
+          </form>
+        </div>
+      </section>
+
       <!-- === PORTOFOLIO PROYEK === -->
       <section class="portfolio-section section-pad" id="portofolio">
         <div class="container">
@@ -362,6 +460,7 @@
                   <a
                     class="button button-dark button-small"
                     href="demo-umkm.html"
+                    data-track-event="preview_open"
                     >Buka Pratinjau <span aria-hidden="true">↗</span></a
                   ><a
                     class="button button-quiet button-small whatsapp-link"
@@ -410,6 +509,7 @@
                   <a
                     class="button button-dark button-small"
                     href="demo-kasir.html"
+                    data-track-event="preview_open"
                     >Buka Pratinjau <span aria-hidden="true">↗</span></a
                   ><a
                     class="button button-quiet button-small whatsapp-link"
@@ -464,6 +564,7 @@
                   <a
                     class="button button-dark button-small"
                     href="demo-stok.html"
+                    data-track-event="preview_open"
                     >Buka Pratinjau <span aria-hidden="true">↗</span></a
                   ><a
                     class="button button-quiet button-small whatsapp-link"
@@ -498,6 +599,7 @@
                   <a
                     class="button button-dark button-small"
                     href="demo-undangan.html"
+                    data-track-event="preview_open"
                     >Buka Pratinjau <span aria-hidden="true">↗</span></a
                   ><a
                     class="button button-quiet button-small whatsapp-link"
@@ -955,15 +1057,59 @@
               dan langkah yang paling sesuai.
             </p>
           </div>
-          <a
-            class="button button-light whatsapp-link"
-            data-message="Halo, saya ingin berkonsultasi mengenai kebutuhan website atau aplikasi."
-            href="https://wa.me/628xxxxxxxxxx"
-            >Hubungi via WhatsApp <span aria-hidden="true">↗</span></a
-          >
+          <div class="contact-actions">
+            <a
+              class="button button-light whatsapp-link"
+              data-message="Halo, saya ingin berkonsultasi mengenai kebutuhan website atau aplikasi."
+              href="https://wa.me/628xxxxxxxxxx"
+              >Hubungi via WhatsApp <span aria-hidden="true">↗</span></a
+            >
+            <button
+              class="button button-promo-trigger"
+              id="promo-trigger"
+              type="button"
+            >
+              Lihat promo konsultasi
+            </button>
+          </div>
         </div>
       </section>
     </main>
+
+    <!-- === POP-UP PROMO === -->
+    <div class="promo-layer" id="promo-layer" hidden>
+      <section
+        class="promo-dialog"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="promo-heading"
+        aria-describedby="promo-description"
+      >
+        <button
+          class="promo-close"
+          id="promo-close"
+          type="button"
+          aria-label="Tutup promo"
+        >
+          <span aria-hidden="true">×</span>
+        </button>
+        <span class="promo-eyebrow">PENAWARAN UNTUK ANDA</span>
+        <h2 id="promo-heading">Konsultasi kebutuhan tanpa biaya.</h2>
+        <p id="promo-description">
+          Diskusikan kebutuhan digital Anda dan dapatkan arahan paket yang
+          sesuai.
+        </p>
+        <a
+          class="button button-dark whatsapp-link"
+          id="promo-claim"
+          data-message="Halo, saya ingin menggunakan promo konsultasi gratis."
+          href="https://wa.me/628xxxxxxxxxx"
+        >
+          Klaim promo via WhatsApp
+          <span aria-hidden="true">↗</span>
+        </a>
+      </section>
+    </div>
 
     <!-- === FOOTER === -->
     <footer class="site-footer">
